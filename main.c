@@ -79,10 +79,14 @@ void main(void)
 void TA0_0_IRQHandler(void)
 {
     int rpm = CURRENT_REVOLUTIONS * 120;
-    double mph = rpm * 2 * 3.14 * 63360;
+    double mph = rpm * 2 * 3.14 * 13 * 63360 * 60;
     lcd_SetLineNumber(LINE1_OFFSET);
     sprintf(Buffer, "Speed: %d MPH", mph);
-
+    printString(Buffer);
+    lcd_SetLineNumber(LINE2_OFFSET);
+    unsigned int distance = TOTAL_REVOLUTIONS * 2 * 3.14 * 13 * 63360;
+    sprintf(Buffer, "DIST: %d MILES", distance);
+    CURRENT_REVOLUTIONS = 0;
     TIMER_A0->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG;
 
 }
