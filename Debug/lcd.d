@@ -19,7 +19,6 @@ lcd.obj: C:/ti/ccs1250/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 lcd.obj: C:/ti/ccs1250/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 lcd.obj: C:/ti/ccs1250/ccs/ccs_base/arm/include/system_msp432p4111.h
 lcd.obj: ../lcd.h
-lcd.obj: ../delays.h
 
 ../lcd.c:
 
@@ -58,6 +57,4 @@ C:/ti/ccs1250/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h:
 C:/ti/ccs1250/ccs/ccs_base/arm/include/system_msp432p4111.h:
 
 ../lcd.h:
-
-../delays.h:
 

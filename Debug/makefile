@@ -11,8 +11,10 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./csHFXT.obj" \
+"./csLFXT.obj" \
 "./delays.obj" \
-"./lcd.obj" \
+"./keypadscan_subroutines.obj" \
+"./lcd4bits_ece230winter23_24.obj" \
 "./main.obj" \
 "./startup_msp432p4111_ccs.obj" \
 "./system_msp432p4111.obj" \
@@ -146,8 +148,8 @@ speedometerTermProject.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "csHFXT.obj" "delays.obj" "lcd.obj" "main.obj" "startup_msp432p4111_ccs.obj" "system_msp432p4111.obj" 
-	-$(RM) "csHFXT.d" "delays.d" "lcd.d" "main.d" "startup_msp432p4111_ccs.d" "system_msp432p4111.d" 
+	-$(RM) "csHFXT.obj" "csLFXT.obj" "delays.obj" "keypadscan_subroutines.obj" "lcd4bits_ece230winter23_24.obj" "main.obj" "startup_msp432p4111_ccs.obj" "system_msp432p4111.obj" 
+	-$(RM) "csHFXT.d" "csLFXT.d" "delays.d" "keypadscan_subroutines.d" "lcd4bits_ece230winter23_24.d" "main.d" "startup_msp432p4111_ccs.d" "system_msp432p4111.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
